@@ -39,8 +39,11 @@ else:
     wall_distance = df_distances["dist_wall"].loc[df_distances["height"] == height_rounded].to_list()[0]
     grid_distance = df_distances["dist_grid"].loc[df_distances["height"] == height_rounded].to_list()[0]
 
-print(wall_distance)
-print(grid_distance)
+# get the bounding box of a room by finding max x and y coords of room polygon
+xmax = max(norm_list_polygon_x_coords)
+ymax = max(norm_list_polygon_y_coords)
+
+
 
 
 
