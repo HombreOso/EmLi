@@ -1,2 +1,6 @@
 venv
 .idea
+*.3dm
+*.png
+*.rvt
+*.pptx

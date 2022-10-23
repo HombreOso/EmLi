@@ -16,8 +16,12 @@ norm_list_polygon_x_coords = list_polygon_x_coords - np.min(list_polygon_x_coord
 norm_list_polygon_y_coords = list_polygon_y_coords - np.min(list_polygon_y_coords)
 
 # combine them to x-y pairs
-x_y_pairs_polygon_unordered = [(x, y) for (x, y) in zip(norm_list_polygon_x_coords, norm_list_polygon_y_coords)]
+x_y_pairs_polygon = [(x, y) for (x, y) in zip(norm_list_polygon_x_coords, norm_list_polygon_y_coords)]
 
-print(x_y_pairs_polygon_unordered)
+print(x_y_pairs_polygon)
+
+
+
+
 
 

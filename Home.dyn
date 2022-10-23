@@ -1,0 +1,192 @@
+{
+  "Uuid": "9f887c79-6e72-4ce0-baf6-c87cd8fbedb8",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Home",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 517,
+      "SelectedString": "OST_Rooms",
+      "NodeType": "ExtensionNode",
+      "Id": "a8c670a39fb84fe09584129cd77b69ea",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ea830a119af54ade97ce7c5f79e17c76",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "2a498ad63af44e348d92c85c3f06b545",
+      "Inputs": [
+        {
+          "Id": "c4718e85d60c4711b3cbe065914591d2",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5cddeed5125d4ccca5bd9479f3d9bea5",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Room.FinishBoundary",
+      "Id": "19dc3a0947314fd3a78b8edc4d7cebc0",
+      "Inputs": [
+        {
+          "Id": "e8b9bf7991d94cf1aff44d9c7a501dd3",
+          "Name": "room",
+          "Description": "Revit.Elements.Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eb5d8252660446848fdc2e34550833e1",
+          "Name": "Curve[][]",
+          "Description": "Curve[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Finish boundary\n\nRoom.FinishBoundary: Curve[][]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "ea830a119af54ade97ce7c5f79e17c76",
+      "End": "c4718e85d60c4711b3cbe065914591d2",
+      "Id": "3e3c789da6f941e88c5a83749f32ccdb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "5cddeed5125d4ccca5bd9479f3d9bea5",
+      "End": "e8b9bf7991d94cf1aff44d9c7a501dd3",
+      "Id": "ae61c0ae3fe748eaa1f7040dc03f84df",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.13",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "2.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.13.1.3887",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -6071.0517578125,
+      "EyeY": 29194.296875,
+      "EyeZ": 19601.11328125,
+      "LookX": 6066.0517578125,
+      "LookY": -29183.296875,
+      "LookZ": -19609.11328125,
+      "UpX": 0.19965772330760956,
+      "UpY": 0.73727738857269287,
+      "UpZ": -0.64541381597518921
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Categories",
+        "ShowGeometry": true,
+        "Id": "a8c670a39fb84fe09584129cd77b69ea",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 56.5,
+        "Y": 208.0
+      },
+      {
+        "Name": "All Elements of Category",
+        "ShowGeometry": true,
+        "Id": "2a498ad63af44e348d92c85c3f06b545",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 324.5,
+        "Y": 207.0
+      },
+      {
+        "Name": "Room.FinishBoundary",
+        "ShowGeometry": true,
+        "Id": "19dc3a0947314fd3a78b8edc4d7cebc0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 627.0,
+        "Y": 210.5
+      }
+    ],
+    "Annotations": [],
+    "X": -30.5398810609895,
+    "Y": -95.168335965230028,
+    "Zoom": 0.69598305574221342
+  }
+}
